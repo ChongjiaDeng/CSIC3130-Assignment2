@@ -1,0 +1,94 @@
+[A2] Music playlist
+Learning Objectives
+Practice working with multiple input files
+Review the creation of linked list class
+Create custom Stack and Queue ADTs to use
+Perform operations with the custom defined ADTs to see the advantages and disadvantages of each
+Problem Description
+Your VIP client wants to listen to the music tracks in this week's latest song list to review them and get a sense for what they sound like. This time your client wants you to process all the full weeks of this quarter that have already passed so you're given multiple CSV files of the same format.
+
+Your client also says they want to listen to songs based on song/track titles in ascending order. It must be in this order.
+
+Can you read from multiple input files?
+Instead of reading just one file at a time, process multiple files. It might help to store the file names in a data structure where myFiles = [week1, week2, week3, weekn] to make it easier to manage, or perhaps you want to make it possible to read any number of files in a directory.
+
+Below is an example of how could try to start the organization of code.
+
+/* Storing one week of data in a queue */
+public MyQueue extends LinkedList {
+  // constructor creates a linked list that stores songs from one text file
+  public MyQueue(String filename){
+    // take the filename, open it and convert to queue
+  }
+}
+
+/* An example for working with multiple text files */
+public class MyApp {
+  // The files you'll be reading stored in a data structure to make it iterable
+  myFiles = [week1, week2, week3, weekn];
+
+  ArrayList<WeekQueue> allTheWeeks = new ArrayList<>();
+
+  for (int i=0; i < myFiles.length-1; i++){
+    MyQueue dataExtract = new MyQueue(myFiles[i]);
+    allTheWeeks.add(dataExtract);
+  }
+}
+Can you build a playlist?
+In class not too long ago we went over the design of various types of linked list design patterns available. Some of these linked lists are conducive to inserting items to one end and removing from the other end.
+
+/* The Playlist implementation */
+
+class Song {
+  private String track;
+  private Song next;
+  // add constructors
+}
+public class Playlist {
+  private Song first;
+  public void Playlist(){
+    // constructor for creating a new list
+  }
+  public void addSong(Song s){
+
+  }
+  public Song listenToSong(){
+    // retrieves the next song to listen to
+  }
+}
+Once you read in multiple files, you'll likely have sorted lists. Try to merge these multiple arrays together into one single sorted queue. Below is an example of merging 2 sorted lists into one.
+
+/* This function takes two queues and returns one into one */
+public MyQueue mergingFunction(MyQueue q1, MyQueue q2){
+
+}
+Can you track what was recently listened to?
+As a song is removed from the song playlist, it should go to the data structure tracking the listing history. In class we learned about the stack data structure that can let you easily access the most recently inserted item.
+
+/* The SongHistoryList implementation */
+
+public class SongHistoryList {
+  private Song first;
+  public void SongHistoryList(){
+    // constructor for creating a new list
+  }
+  public void addSong(Song s){
+
+  }
+  public Song lastListened(){
+    // retrieves the next song to listen to
+  }
+}
+Where to Submit
+Please fill out this form
+
+What you should submit is a link to where your code repository is located. Your code repository should have the elements described in the project template section. It should also match the items asked for in parts 1 and 2 above.
+
+TODO How did you organize your files?
+TODO How did you build your playlist?
+TODO How did you track the recently listened to tracks
+
+
+Link From: https://cisc3130-s20.github.io/assignments/#a2
+
+Don't copy.
